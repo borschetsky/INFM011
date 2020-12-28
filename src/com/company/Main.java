@@ -6,18 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Stack<Integer> myStack = new Stack<Integer>();
         System.out.println("Please enter an expression to check:");
         String s = scanner.nextLine();
 
         while (!s.equals("end")) {
             String expressions = s;
-            System.out.println(checkExpression(expressions, myStack));
+            System.out.println(checkExpression(expressions));
             s = scanner.nextLine();
         }
     }
 
-    private static String checkExpression (String expression, Stack<Integer> myStack) {
+    private static String checkExpression (String expression) {
+        Stack<Integer> myStack = new Stack<Integer>();
         boolean correctBrackets = true;
 
         for (int index = 0; index < expression.length(); index++) {
