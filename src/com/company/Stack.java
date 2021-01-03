@@ -13,7 +13,7 @@ public class Stack<T> {
     public void push(T element) {
         int currentPosition = lastElement + 1;
 
-        if(currentPosition <= array.length - 1){
+        if(currentPosition > array.length - 1){
             array = Arrays.copyOf(array, array.length * 2);
         }
 
@@ -21,10 +21,16 @@ public class Stack<T> {
         lastElement = currentPosition;
     }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
 >>>>>>> Stashed changes
+=======
+    public  int testsize () {
+        return  array.length;
+    }
+>>>>>>> a98fee420c0b5118eb53c3af6268a62f776ec6fe
     public T pop () throws EmptyStackException {
         if(!isEmpty()){
             Object elementToReturn = array[lastElement];
