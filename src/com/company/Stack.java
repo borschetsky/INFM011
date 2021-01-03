@@ -21,6 +21,10 @@ public class Stack<T> {
         lastElement = currentPosition;
     }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     public T pop () throws EmptyStackException {
         if(!isEmpty()){
             Object elementToReturn = array[lastElement];
